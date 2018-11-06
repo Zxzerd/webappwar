@@ -9,10 +9,6 @@
 	<name>Number Generator WebApp</name>
 	<url>http://denofprogramming.com</url>
 
-	<organization>
-		<name>denOfProgramming</name>
-		<url>www.denofprogramming.com</url>
-	</organization>
 	<description>Simple web application to show the Maven build tool in action.
 Also show cases the 'Simple Logging Framework - slf4j'.</description>
 
@@ -100,6 +96,22 @@ Also show cases the 'Simple Logging Framework - slf4j'.</description>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+ <repositories>
+    <repository>
+      <id>maven-group</id>
+      <url>http://10.19.10.154:8081/repository/maven-public/</url>
+    </repository>
+  </repositories>
+	
+<distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://10.19.10.154:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://10.19.10.154:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
 
 </project>
