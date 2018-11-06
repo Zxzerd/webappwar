@@ -1,13 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.denofprogramming</groupId>
+	<groupId>Final</groupId>
 	<artifactId>sampleWebApp</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
 
 	<name>Number Generator WebApp</name>
-	<url>http://denofprogramming.com</url>
 
 	<description>Simple web application to show the Maven build tool in action.
 Also show cases the 'Simple Logging Framework - slf4j'.</description>
@@ -96,22 +95,25 @@ Also show cases the 'Simple Logging Framework - slf4j'.</description>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
- <repositories>
+	
+  <repositories>
     <repository>
-      <id>maven-group</id>
-      <url>http://10.19.10.154:8081/repository/maven-public/</url>
+      <id>maven-releases</id>
+      <url>http://10.19.10.154:8081/repository/maven-releases/</url>
     </repository>
   </repositories>
 	
-<distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://10.19.10.154:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
+  <distributionManagement>
     <repository>
-      <id>nexus-releases</id>
+      <id>maven-releases</id>
+      <name>releases</name>
       <url>http://10.19.10.154:8081/repository/maven-releases/</url>
     </repository>
+    <snapshotRepository>
+      <id>maven-snapshots</id>
+      <name>snapshots</name>
+      <url>http://10.19.10.154:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
 </project>
