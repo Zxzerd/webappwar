@@ -41,6 +41,32 @@ Also show cases the 'Simple Logging Framework - slf4j'.</description>
 					<warName>mywebapp</warName>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.5.v20120716</version>
+				<configuration>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+			</plugin>
+			<plugin>
+                                <groupId>org.wildfly.plugins</groupId>
+                                <artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.2.2.Final</version>
+                                <configuration>
+                                     <hostname>${wildfly-hostname}</hostname>
+                                     <port>${wildfly-port}</port>
+                                     <username>${wildfly-username}</username>
+                                     <password>${wildfly-password}</password>
+                               	     <name>${wildfly-name}</name>
+                                </configuration>
+                       </plugin>
+
 		</plugins>
 		<!-- shown as an example, second priority for the WAR name -->
 		<finalName>mywebappNameSecondOption</finalName>
